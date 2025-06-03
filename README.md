@@ -28,7 +28,7 @@
 
 ---
 
-## 🛠️ Project Status
+## Project Status
 
 - ✅ Data source collected (H1B Disclosure Data FY2023)
 - 🛠️ Data cleaning in progress (job titles, employer standardization)
@@ -40,13 +40,13 @@ Stay tuned for updates!
 
 ---
 
-## 🚀 Data Sources
+## Data Sources
 
 - [H-1B Disclosure Data (U.S. Dept of Labor)](https://www.foreignlaborcert.doleta.gov/performancedata.cfm)
 
 ---
 
-## 🙋‍♀️ Author
+## Author
 
 **Arina Zhou**  
 B.S. in Statistics @ UIUC  
