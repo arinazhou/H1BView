@@ -1,54 +1,37 @@
-# H1BView
+# H1BView: H1B Job Title Insight Dashboard
 
-📊 A data analytics project exploring employment trends and H-1B sponsorship outcomes for international students in the U.S.
+Currently, this is a lightweight, interactive dashboard that helps international students explore job sponsorship trends by job title, using FY2025 Q2 LCA Disclosure Data.
 
----
-
-## Project Overview
-
-**H1BView** is an open-source data analytics initiative that investigates international student employment trends and H-1B sponsorship patterns in the United States. It aims to help students, job seekers, and educators understand where opportunities are, and which companies are most likely to sponsor.
+Built with `Streamlit`, `Pandas`, `Plotly`, and SQL, this project serves as both a career research tool and a data-driven résumé booster.
 
 ---
 
-## Key Features
+## Purpose
 
-- Real-world datasets from U.S. Department of Labor and universities
-- SQL-based employer & job title queries
-- Streamlit dashboard with sponsorship trend visualizations
-- Insightful reports on job types, salaries, locations, and approval rates
+**Why this project?**
 
----
+Many international students struggle to understand which jobs, companies, and roles have higher H1B sponsorship potential. This dashboard provides a first step toward exploring this question using real U.S. government labor condition application (LCA) disclosure data.
 
-## Tech Stack
-
-- Python (pandas, matplotlib, seaborn, plotly)
-- SQLite / PostgreSQL (for relational storage + SQL analysis)
-- Streamlit (for building interactive dashboard)
-- Git + GitHub (for collaboration and version control)
+> Note:  
+> Although the project originally planned to **compare LCA filings with USCIS H-1B approval data**, this feature is temporarily postponed for the following reasons:
+>
+> - **USCIS 2025 data not fully released**  
+> - **FY2024 and FY2025 use different selection rules**: a new lottery mechanism effective March 2024 significantly alters approval logic, which causes recent datasets to just represent a transitional trend
+> - To ensure accurate, meaningful cross-source comparisons, deeper restructuring will be needed (planned for future phases)
 
 ---
 
-## Project Status
+## Features
 
-- ✅ Data source collected (H1B Disclosure Data FY2023)
-- 🛠️ Data cleaning in progress (job titles, employer standardization)
-- ❌ SQL schema design
-- ❌ Streamlit dashboard
-- ❌ Deployment
+1. Search job titles using keyword  
+2. Display matched cases by employer, title, state, estimated salary, and case status 
+3. Visualize:
+- Top 10 employers by median certified salary
+- Approval vs Denial rate for searched keyword
 
-Stay tuned for updates!
 
----
+| Dashboard Search | Salary & Approval Charts |
+|------------------|--------------------------|
+| *(Add Screenshot Here)* | *(Add Screenshot Here)* |
 
-## Data Sources
 
-- [H-1B Disclosure Data (U.S. Dept of Labor)](https://www.foreignlaborcert.doleta.gov/performancedata.cfm)
-
----
-
-## Author
-
-**Arina Zhou**  
-B.S. in Statistics @ UIUC  
-Contact: arinaz2@illinois.edu  
-GitHub: [arinazhou](https://github.com/arinazhou)
