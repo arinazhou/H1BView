@@ -192,3 +192,5 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignoreLCA_Disclosure_Data_FY2025_Q2.xlsx
+
+*.xlsx
