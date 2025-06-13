@@ -73,7 +73,12 @@ You're welcome to:
 - Improve dashboard UI or filtering logic
 - Add comparisons to USCIS data when available
 
-Suggest features or open issues
+### Code style:
+- Use clear variable names
+- Format with `black` or similar formatter
+- Submit PRs to the `main` branch
+
+Feel free to open issues or suggestions!
 
 🌟 Ideal for international students, data analysts, and career-minded coders.
 
