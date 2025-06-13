@@ -60,8 +60,8 @@ To run this project:
 
 # How to Run
 
-pip install -r requirements.txt
-streamlit run app/app.py
+`pip install -r requirements.txt`
+`streamlit run app/app.py`
 
 ## Contributing
 
