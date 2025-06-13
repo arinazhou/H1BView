@@ -194,3 +194,8 @@ cython_debug/
 .cursorindexingignoreLCA_Disclosure_Data_FY2025_Q2.xlsx
 
 *.xlsx
+
+# H1B dataset files
+data/
+*.csv
+*.xlsx
