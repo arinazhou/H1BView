@@ -1,80 +1,99 @@
-# H1BView: H1B Job Title Insight Dashboard
+# 📊 H1BView: H-1B Sponsorship Insight Dashboard
 
-Currently, this is a lightweight, interactive dashboard that helps international students explore job sponsorship trends by job title, using FY2025 Q2 LCA Disclosure Data.
+An interactive dashboard to explore 2025 Q1–Q2 H-1B visa filings, helping international job seekers discover **sponsor-friendly job titles**, **top-paying employers**, and **approval trends**.
 
-Built with `Streamlit`, `Pandas`, `Plotly`, and `SQL`, this project serves as both a career research tool and a data-driven résumé booster.
-
-Used Tableau to visualize the case status distribution across the US using a job-title filter and geographic heat map
+<!-- ![Dashboard Overview](demo/dashboard_overview.png) -->
 
 ---
 
-## Purpose
+## 🔍 Features
 
-**Why this project?**
-
-Many international students struggle to understand which jobs, companies, and roles have higher H1B sponsorship potential. This dashboard provides a first step toward exploring this question using real U.S. government labor condition application (LCA) disclosure data.
-
-> Note:  
-> Although the project originally planned to **compare LCA filings with USCIS H-1B approval data**, the dataset showing the actual approval of H1B, this feature is temporarily postponed for the following reasons:
->
-> - **USCIS 2025 data not fully released**  
-> - **FY2024 and FY2025 use different selection rules**: a new lottery mechanism effective March 2024 significantly alters approval logic, which causes recent datasets to just represent a transitional trend
-> - To ensure accurate, meaningful cross-source comparisons, deeper restructuring will be needed (planned for future phases)
+- **Keyword Search**: Filter by job title (e.g., `Data`, `Software`) in the sidebar
+- **Top Salary Visualization**: View top 10 employers offering highest median salaries
+- **Approval Ratio**: See approval vs. denial case breakdown
+- **Export Results**: Download filtered data as CSV
+- **Responsive UI**: Streamlit + Plotly interface
 
 ---
 
-## Features
+## 💡 Key Findings
 
-### Current Functionalities (Streamlit)
-
-- Search job titles using keyword input  
-- Filter and preview case details: employer, title, state, estimated salary, and case status  
-- Visualize:
-  - **Top 10 employers** on bar chart
-  - **Approval vs Denial rate** on pie chart
-- Download filtered results as CSV
-
-### Other Visualizations (Tableau)
-
-- U.S. map of **case status distribution** by job title filter  
-- Future enhancements may include wage range and location filters
+- **Top Sponsors**: Amazon, Google, Meta, and Deloitte are leading H-1B sponsors
+- **Popular Job Titles**: Most certified filings are software-related, especially in CA, TX, and WA
+- **Salary Differences**: Tech companies generally offer higher salaries than consulting firms
+- **Approval Trends**: Most major employers maintain high approval rates
 
 ---
 
-## Screenshot
+## 📈 Visual Highlights
+
+### 🖱️ Interactive Dashboard Search
+
+Try typing a keyword in the sidebar (e.g. `Software`) and view results instantly.
 
 ![home.png](image/home.png)
-![approval_pie_chart](image/approval_pie_chart.png)
-![salary_chart](image/salary_chart.png)
 ![Tableau Map](image/tableau_map_denied.png)
 
-## Try the dashboard
-# Dataset
-Due to file size limits and regular government updates, the dataset is not included in this repository.
 
-To run this project:
+---
 
-1. Visit the [U.S. Department of Labor H1B Disclosure Data](https://www.dol.gov/agencies/eta/foreign-labor/performance)
-2. Download the FY2025 Q2 LCA Disclosure Data (Excel or CSV format)
-3. Save the file as: `data/h1b_clean_2025.csv`
+### 💰 Top Median Salaries by Employer
 
-# How to Run
+Bar chart of certified cases showing the highest median salaries for the selected keyword.
 
-pip install -r requirements.txt
-streamlit run app/app.py
+![salary_chart](image/salary_chart.png)
 
-## Contributing
+---
 
-This project is open to contributions!
+### ✅ Approval vs Denial Ratio
 
-You're welcome to:
+Pie chart of approval status distribution based on your search keyword.
 
-- Update the dataset when new quarters or fiscal years are released
-- Improve dashboard UI or filtering logic
-- Add comparisons to USCIS data when available
+![approval_pie_chart](image/approval_pie_chart.png)
 
-Suggest features or open issues
+---
 
-🌟 Ideal for international students, data analysts, and career-minded coders.
+### 📊 Visualizations in jupiter notebook
+![job_state](image/job_state.png)
+![salary_comparison](image/salary_comparison.png)
+![job_title](image/job_state.png)
+![ave_salary](image/ave_salary.png)
 
+## Dataset
 
+- **Source**: U.S. Department of Labor (H-1B Disclosure Data)
+- **Scope**: 2025 Q1–Q2 Certified & Denied LCA Applications
+- **Fields Used**:
+  - `employer`
+  - `job_title`
+  - `state`
+  - `estimated_yearly_salary`
+  - `case_status`
+
+---
+
+## ⚠️ Limitations
+
+- **Title Noise**: No standard job title taxonomy (e.g., `SDE I` vs `Senior SWE`)
+- **No Entry-Level Flag**: Dataset lacks clear entry-level position label
+- **Partial Timeframe**: Includes only filings from Q1–Q2 2025; may not reflect annual trends
+
+---
+
+## 🛠 Tech Stack
+
+| Tool        | Usage                                  |
+|-------------|----------------------------------------|
+| Python      | Data manipulation (pandas)             |
+| Streamlit   | Interactive dashboard UI               |
+| Plotly      | Dynamic visualizations (bar, pie)      |
+| SQL         | Backend data query                     |
+| Tableau     | Additional state-wise visual insights  |
+
+---
+
+## 🚀 How to Run
+
+```bash
+pip install streamlit pandas plotly
+streamlit run app.py
